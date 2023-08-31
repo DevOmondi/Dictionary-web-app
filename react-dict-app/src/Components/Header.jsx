@@ -40,9 +40,9 @@ const Header = ({ setFontValue }) => {
               });
             }}
             placeholder="Select Font"
+            searchable={false}
+            color="#A445ED"
           />
-          {/* <p>Sans Serif</p> */}
-          {/* <img src={dropDown} alt="drop down" /> */}
         </div>
         <div className="flex gap-3 items-center pl-3">
           <Switch

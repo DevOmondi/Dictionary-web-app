@@ -52,9 +52,9 @@ function App() {
       value={{ darkTheme: darkTheme, setDarkTheme: setDarkTheme }}
     >
       <div
-        className={`h-full ${darkTheme ? "bg-[#050505]" : "bg-[#FFFFFF]"} ${
-          darkTheme ? "text-[#FFFFFF]" : "text-[#2D2D2D]"
-        }`}
+        className={`h-[100vh] overflow-auto ${
+          darkTheme ? "bg-[#050505]" : "bg-[#FFFFFF]"
+        } ${darkTheme ? "text-[#FFFFFF]" : "text-[#2D2D2D]"}`}
         style={{ fontFamily: `${fontValue.value}` }}
       >
         <Header setFontValue={setFontValue} />
@@ -73,7 +73,12 @@ function App() {
             } focus:outline-none`}
             onChange={(e) => setSearchedWord(e.target.value)}
           />
-          <img src={searchIcon} alt="search icon" onClick={getWordInfo} />
+          <img
+            src={searchIcon}
+            alt="search icon"
+            onClick={getWordInfo}
+            className="cursor-pointer"
+          />
         </div>
         {/* Loader */}
         {isLoading && (
@@ -104,6 +109,7 @@ function App() {
             height={40}
             width={40}
             onClick={playAudio}
+            className="cursor-pointer"
           />
         </div>
         {/* Meaning section */}
